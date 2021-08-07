@@ -1,0 +1,16 @@
+{
+  "name": "melon-tech",
+  "version": "1.0.0",
+  "description": "a website as second project on a tech company which provides web services",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass scss:styles -w"
+
+  },
+  "author": "AlizZz",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "sass": "^1.35.2"
+  }
+}
