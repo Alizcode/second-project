@@ -1,4 +1,6 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Oxygen&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -13,7 +15,7 @@ body {
 }
 
 header {
-  height: 4rem;
+  height: 4.5rem;
 }
 header img {
   width: 9rem;
@@ -51,10 +53,10 @@ header nav a {
   position: relative;
   overflow: hidden;
   width: 5rem;
-  height: 2.5rem;
+  vertical-align: middle;
   text-align: center;
-  padding-bottom: 1.1rem;
   margin: 0.3rem 1.5vw;
+  z-index: 1;
 }
 header nav span {
   position: absolute;
@@ -120,6 +122,7 @@ header a:hover span:nth-child(4) {
     right: -100%;
     top: 2rem;
     transition: 0.5s;
+    margin: 0;
   }
   header #check:checked ~ a {
     right: 10px;
@@ -127,21 +130,23 @@ header a:hover span:nth-child(4) {
 }
 
 .banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  z-index: -1;
-}
-.banner img {
-  width: 100vw;
-  height: 600px;
+  background-image: linear-gradient(to bottom, #0c152477, #373e4b81), url(../resources/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 700px;
+  position: relative;
+  z-index: 0;
 }
 .banner h1 {
   position: absolute;
-  top: 350px;
-  font-size: 4.5vw;
+  top: 55%;
+  font-size: 5vw;
   letter-spacing: 0.2rem;
-  text-shadow: 3px 3px 3px black;
+  text-shadow: 4px 4px 5px #49a164;
+  padding: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 800;
 }
 .banner button {
   padding: 0.3rem 0.7rem;
@@ -149,10 +154,14 @@ header a:hover span:nth-child(4) {
   color: #eafdea;
   cursor: pointer;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   border-radius: 10px;
   position: absolute;
-  top: 510px;
+  top: 85%;
+  left: 2rem;
+  font-size: 1.2rem;
+  padding: 0.56rem;
+  text-transform: capitalize;
 }
 .banner button:before {
   content: "";
@@ -202,15 +211,18 @@ header a:hover span:nth-child(4) {
   }
 }
 @media only screen and (max-width: 800px) {
-  .banner img {
-    height: 350px;
+  .banner {
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .banner h1 {
-    top: 280px;
+    top: 45%;
+    font-size: 7vw;
   }
   .banner button {
-    top: 340px;
-    font-size: 0.7rem;
+    top: 90%;
+    font-size: 0.8rem;
     padding: 0.5rem;
   }
 }
@@ -299,7 +311,7 @@ header a:hover span:nth-child(4) {
   color: #eafdea;
   cursor: pointer;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   border-radius: 10px;
   text-transform: capitalize;
 }
@@ -388,6 +400,9 @@ footer .top-section input {
   padding: 0.3rem;
   margin-right: 0.5rem;
   border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 1.5px;
 }
 footer .top-section input::placeholder {
   color: #eafdea;
@@ -398,7 +413,7 @@ footer .top-section button {
   color: #eafdea;
   cursor: pointer;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   border-radius: 10px;
 }
 footer .top-section button:before {
@@ -487,6 +502,254 @@ footer .bottom-part a {
   color: #eafdea;
   cursor: pointer;
   text-decoration: none;
+}
+
+.hero-image {
+  background-image: linear-gradient(to bottom, #0c152477, #373e4b81), url(../resources/pexels-fauxels-3183181.jpg);
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: -1;
+}
+.hero-image h1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 7vw;
+  text-shadow: darkgray 5px 5px 3px;
+  font-family: "oxygen";
+}
+
+main .tiles {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: -80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  z-index: 1;
+}
+@media screen and (max-width: 850px) {
+  main .tiles {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+  }
+}
+main .tiles .line {
+  width: 50px;
+  height: 3px;
+  background: #eafdea;
+  margin-top: 1rem;
+}
+main .tiles span {
+  background: #0C1524;
+  height: 250px;
+  transition: 0.35s;
+  padding: 1rem;
+}
+main .tiles span:hover {
+  background: silver;
+  color: #173124;
+}
+main .tiles span li {
+  padding: 3px;
+}
+main .tiles span li::marker {
+  content: "► ";
+}
+main hr:nth-child(2) {
+  margin-top: 8rem;
+}
+main .mid-text {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #0C1524;
+  text-align: center;
+  padding: 5vw;
+}
+@media screen and (max-width: 850px) {
+  main .mid-text {
+    grid-template-columns: 1fr;
+  }
+  main .mid-text img {
+    width: 80vw;
+  }
+}
+main .mid-text .left-side {
+  text-align: left;
+  margin-top: 5rem;
+}
+main .mid-text .left-side p {
+  text-align: justify;
+}
+main .why-choose-us {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #373e4b;
+}
+main .why-choose-us img {
+  width: 50vw;
+}
+main .why-choose-us li {
+  padding: 3px;
+}
+main .why-choose-us li::marker {
+  content: "► ";
+}
+@media screen and (max-width: 850px) {
+  main .why-choose-us {
+    grid-template-columns: 1fr;
+  }
+  main .why-choose-us img {
+    width: 80vw;
+    margin: 10vw;
+  }
+}
+main .why-choose-us .right-side {
+  margin: auto;
+}
+
+.hero-image-contact-us {
+  background-image: linear-gradient(to bottom, #0c152477, #373e4b81), url(../resources/contact-us.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  height: 500px;
+  position: relative;
+}
+.hero-image-contact-us h1, .hero-image-contact-us p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero-image-contact-us h1 {
+  top: 38%;
+  text-shadow: 4px 4px 5px #49a164;
+  font-size: 5vw;
+}
+.hero-image-contact-us p {
+  top: 65%;
+}
+@media screen and (max-width: 500px) {
+  .hero-image-contact-us {
+    height: 350px;
+    background-position: right;
+  }
+  .hero-image-contact-us p {
+    font-size: 0.7rem;
+  }
+  .hero-image-contact-us h1 {
+    font-size: 8vw;
+    top: 45%;
+  }
+}
+
+.contact-main {
+  margin: 9rem;
+}
+.contact-main .form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2vw;
+  max-width: 1000px;
+  margin: auto;
+  background: #0C1524;
+  padding: 3rem;
+}
+.contact-main .form iframe {
+  filter: brightness(0.7);
+}
+.contact-main .form .left-side form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-main .form .left-side input, .contact-main .form .left-side textarea {
+  background: black;
+  border: #eafdea 1px solid;
+  padding: 0.3rem;
+  margin-right: 0.5rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+}
+.contact-main .form .left-side input::placeholder, .contact-main .form .left-side textarea::placeholder {
+  color: #eafdea;
+}
+.contact-main .form .left-side button {
+  padding: 0.3rem 0.7rem;
+  border: #eafdea 1px solid;
+  color: #eafdea;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  border-radius: 10px;
+}
+.contact-main .form .left-side button:before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.contact-main .form .left-side button:active {
+  color: black;
+}
+.contact-main .form .left-side button:active:after {
+  background: transparent;
+}
+.contact-main .form .left-side button:hover:before {
+  opacity: 1;
+}
+.contact-main .form .left-side button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .contact-main {
+    margin: 2vw;
+  }
+  .contact-main .form {
+    grid-template-columns: 1fr;
+    width: 70vw;
+    padding: 0.5rem;
+  }
+  .contact-main .form h2 {
+    font-size: 5vw;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

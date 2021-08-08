@@ -26,7 +26,7 @@
     color: $textColor;
     cursor: pointer;
     position: relative;
-    z-index: 1;
+    z-index: 3;
     border-radius: 10px;
 
     &:before {
@@ -75,4 +75,46 @@
         50% { background-position: 400% 0; }
         100% { background-position: 0 0; }
     }
+}
+
+
+@mixin fancytiles {
+    
+    background: $darkGround;
+    height: 250px;
+    transition: 0.35s;
+    padding: 1rem;
+    
+
+    &:hover
+    {
+        background: silver;
+        color: $hoverTextColor;
+    }
+}
+
+@mixin fancyli {
+    
+    padding: 3px;
+               &::marker
+               {
+                content: '► ';
+               }
+}
+
+@mixin fancyinput {
+        
+        background: black;
+        border: $textColor 1px solid;
+        padding: 0.3rem;
+        margin-right: 0.5rem;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        font-family: $mainFont;
+        letter-spacing: 1.5px;
+        
+        &::placeholder
+        {
+            color: $textColor;
+        }
 }
