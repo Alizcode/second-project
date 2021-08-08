@@ -267,8 +267,12 @@ height: 4.5rem;
     .technologies
     {
         text-align: center;
-        background: $forGround;
-        padding: 3rem;
+        padding: 55px 4px 200px;  
+        background: linear-gradient(to top left, $lightGround 49.5%, transparent 50.5%), linear-gradient($darkGround, $darkGround), linear-gradient(to bottom right, $lightGround 49.5%, transparent 50.5%);
+        background-size: 100% 50px, 100% calc(100% - 175px), 100% 50px;
+        background-repeat: no-repeat;
+        background-position: 0px 0px, 0% 50px, 0% 89.8%;
+        
 
         .icons
         {
@@ -367,6 +371,7 @@ footer
             background: $darkGround;
             width: 100vw;
             margin-top: 10px;
+            padding: 2vw
         }
     }
 
@@ -581,7 +586,7 @@ main
     background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
-    height: 500px;
+    height: 400px;
     position: relative;
 
     h1, p
@@ -595,14 +600,14 @@ main
     {
         top: 38%;
         text-shadow: $headingShadow;
-        font-size: 5vw;
+        font-size: 4.2rem;
     }
     p
     {
         top: 65%;
     }
 
-    @media screen and (max-width:500px) {
+    @media screen and (max-width:600px) {
         height: 350px;
         background-position: right;
         p
@@ -611,7 +616,7 @@ main
         }
         h1
         {
-            font-size: 8vw;
+            font-size: 1.9rem;
             top: 45%;
         }
     }
@@ -665,11 +670,62 @@ main
         width: 70vw;
         padding: 0.5rem;
 
-        h2
+        input, textarea, button
         {
-            font-size: 5vw;
+         max-width: 60vw;
         }
         }
         
     }
+}
+
+// services page start
+
+.opening-text
+{
+    max-width: 800px;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.services-two
+{
+    background: $lightGround;
+    
+    .wrapper
+    {
+    max-width: 1000px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2vw;
+    justify-items: center;
+    padding: 2rem;
+    span
+    {
+        background: $forGround;
+        padding-bottom: 1.5rem;
+        width: 180px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        transition: 0.35s;
+
+        &:hover
+        {
+            box-shadow: $textColor 2px 2px 12px;
+            transform: scale(1.02);
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        grid-template-columns: 1fr;
+        span:nth-child(even)
+        {
+            display: none;
+        }
+
+    }
+}
 }

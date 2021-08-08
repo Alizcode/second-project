@@ -262,8 +262,11 @@ header a:hover span:nth-child(4) {
 
 .technologies {
   text-align: center;
-  background: #13171f;
-  padding: 3rem;
+  padding: 55px 4px 200px;
+  background: linear-gradient(to top left, #373e4b 49.5%, transparent 50.5%), linear-gradient(#0C1524, #0C1524), linear-gradient(to bottom right, #373e4b 49.5%, transparent 50.5%);
+  background-size: 100% 50px, 100% calc(100% - 175px), 100% 50px;
+  background-repeat: no-repeat;
+  background-position: 0px 0px, 0% 50px, 0% 89.8%;
 }
 .technologies .icons {
   display: grid;
@@ -392,6 +395,7 @@ footer .top-section .middle {
     background: #0C1524;
     width: 100vw;
     margin-top: 10px;
+    padding: 2vw;
   }
 }
 footer .top-section input {
@@ -619,7 +623,7 @@ main .why-choose-us .right-side {
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
-  height: 500px;
+  height: 400px;
   position: relative;
 }
 .hero-image-contact-us h1, .hero-image-contact-us p {
@@ -630,12 +634,12 @@ main .why-choose-us .right-side {
 .hero-image-contact-us h1 {
   top: 38%;
   text-shadow: 4px 4px 5px #49a164;
-  font-size: 5vw;
+  font-size: 4.2rem;
 }
 .hero-image-contact-us p {
   top: 65%;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .hero-image-contact-us {
     height: 350px;
     background-position: right;
@@ -644,7 +648,7 @@ main .why-choose-us .right-side {
     font-size: 0.7rem;
   }
   .hero-image-contact-us h1 {
-    font-size: 8vw;
+    font-size: 1.9rem;
     top: 45%;
   }
 }
@@ -747,8 +751,49 @@ main .why-choose-us .right-side {
     width: 70vw;
     padding: 0.5rem;
   }
-  .contact-main .form h2 {
-    font-size: 5vw;
+  .contact-main .form input, .contact-main .form textarea, .contact-main .form button {
+    max-width: 60vw;
+  }
+}
+
+.opening-text {
+  max-width: 800px;
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.services-two {
+  background: #373e4b;
+}
+.services-two .wrapper {
+  max-width: 1000px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2vw;
+  justify-items: center;
+  padding: 2rem;
+}
+.services-two .wrapper span {
+  background: #13171f;
+  padding-bottom: 1.5rem;
+  width: 180px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  transition: 0.35s;
+}
+.services-two .wrapper span:hover {
+  box-shadow: #eafdea 2px 2px 12px;
+  transform: scale(1.02);
+}
+@media screen and (max-width: 650px) {
+  .services-two .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .services-two .wrapper span:nth-child(even) {
+    display: none;
   }
 }
 
