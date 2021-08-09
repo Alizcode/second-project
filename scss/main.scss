@@ -150,15 +150,17 @@ height: 4.5rem;
         nav a
         {
             display: block !important;
-            right: -100%;
+            right: -20%;
             top: 2rem;
             transition: 0.5s;
             margin: 0;
+            opacity: 0;
         }
        
         #check:checked ~ a
         {
             right: 10px;
+            opacity: 1;
         }
     }
     
@@ -468,7 +470,6 @@ main
     .tiles
     {
         max-width: 1200px;
-        
         margin: auto;
         margin-top: -80px;
         display: grid;
@@ -509,33 +510,10 @@ main
 
     .mid-text
     {
-        margin: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        background: $darkGround;
-        text-align: center;
-        padding: 5vw;
+        @include textWithImage
 
-        @media screen and (max-width:850px) {
-            grid-template-columns: 1fr;
-
-            img
-            {
-                width: 80vw;
-            }
-        }
-
-        .left-side
-        {
-            text-align: left;
-            margin-top: 5rem;
-
-            p
-            {
-                text-align: justify;
-            }
-        }
     }
+
 
     .why-choose-us
     {
@@ -727,6 +705,78 @@ main
 {
     .text-part
     {
-        max-width: 1000px;
+        width: 1200px;
+        margin: auto;
+        h2
+        {
+            font-size: 2rem;
+        }
+    }
+    
+    .services
+    {
+        .sub-section
+        {
+            text-align: center;
+            h2
+            {
+                text-transform: uppercase;
+            }
+            section
+            {
+                height: 300px;
+            }
+            i
+            {
+                border: $textColor 1.5px solid;
+                padding: 10px;
+                border-radius: 50%;
+                font-size: 1.5rem;
+                
+            }
+        }
+    }
+}
+.information-security
+{
+    padding-top: 2rem;
+    background: $lightGround;
+    
+        .mid-text
+        {
+            background: $lightGround;
+        }
+    
+    .sub-section
+    {
+        max-width: 1200px;
+        margin: auto;
+    }
+    h1
+    {
+        text-decoration: underline;
+        line-height: 40px;
+        letter-spacing: 2px;
+    }
+}
+
+
+.product-eng
+{
+    @include textWithImage;
+    background: $lightGround;
+    .product-tabs > section
+    {
+        background: $darkGround;
+        text-align: left;
+        padding: 1px 1rem;
+        margin: 1rem 0;
+        transition: 0.35s;
+
+        &:hover
+    {
+        background: silver;
+        color: $hoverTextColor;
+    }
     }
 }

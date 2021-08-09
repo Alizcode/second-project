@@ -35,11 +35,6 @@ header nav .checkbtn {
 }
 @media only screen and (max-width: 800px) {
   header nav .checkbtn {
-    font-size: 2rem;
-    float: right;
-    line-height: 3rem;
-    margin-right: 3vw;
-    cursor: pointer;
     display: block;
   }
 }
@@ -119,13 +114,15 @@ header a:hover span:nth-child(4) {
 @media only screen and (max-width: 800px) {
   header nav a {
     display: block !important;
-    right: -100%;
+    right: -20%;
     top: 2rem;
     transition: 0.5s;
     margin: 0;
+    opacity: 0;
   }
   header #check:checked ~ a {
     right: 10px;
+    opacity: 1;
   }
 }
 
@@ -575,6 +572,9 @@ main .mid-text {
   text-align: center;
   padding: 5vw;
 }
+main .mid-text img {
+  max-width: 40vw;
+}
 @media screen and (max-width: 850px) {
   main .mid-text {
     grid-template-columns: 1fr;
@@ -795,6 +795,85 @@ main .why-choose-us .right-side {
   .services-two .wrapper span:nth-child(even) {
     display: none;
   }
+}
+
+.service-three .text-part {
+  width: 1200px;
+  margin: auto;
+}
+.service-three .text-part h2 {
+  font-size: 2rem;
+}
+.service-three .services .sub-section {
+  text-align: center;
+}
+.service-three .services .sub-section h2 {
+  text-transform: uppercase;
+}
+.service-three .services .sub-section section {
+  height: 300px;
+}
+.service-three .services .sub-section i {
+  border: #eafdea 1.5px solid;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+.information-security {
+  padding-top: 2rem;
+  background: #373e4b;
+}
+.information-security .mid-text {
+  background: #373e4b;
+}
+.information-security .sub-section {
+  max-width: 1200px;
+  margin: auto;
+}
+.information-security h1 {
+  text-decoration: underline;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.product-eng {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #0C1524;
+  text-align: center;
+  padding: 5vw;
+  background: #373e4b;
+}
+.product-eng img {
+  max-width: 40vw;
+}
+@media screen and (max-width: 850px) {
+  .product-eng {
+    grid-template-columns: 1fr;
+  }
+  .product-eng img {
+    width: 80vw;
+  }
+}
+.product-eng .left-side {
+  text-align: left;
+  margin-top: 5rem;
+}
+.product-eng .left-side p {
+  text-align: justify;
+}
+.product-eng .product-tabs > section {
+  background: #0C1524;
+  text-align: left;
+  padding: 1px 1rem;
+  margin: 1rem 0;
+  transition: 0.35s;
+}
+.product-eng .product-tabs > section:hover {
+  background: silver;
+  color: #173124;
 }
 
 /*# sourceMappingURL=main.css.map */
