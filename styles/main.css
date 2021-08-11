@@ -404,6 +404,7 @@ footer .top-section input {
   font-size: 0.9rem;
   font-family: "Ubuntu", sans-serif;
   letter-spacing: 1.5px;
+  color: #eafdea;
 }
 footer .top-section input::placeholder {
   color: #eafdea;
@@ -681,6 +682,7 @@ main .why-choose-us .right-side {
   font-size: 0.9rem;
   font-family: "Ubuntu", sans-serif;
   letter-spacing: 1.5px;
+  color: #eafdea;
   margin-bottom: 1rem;
 }
 .contact-main .form .left-side input::placeholder, .contact-main .form .left-side textarea::placeholder {
