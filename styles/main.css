@@ -521,7 +521,7 @@ footer .bottom-part a {
   transform: translateX(-50%);
   font-size: 7vw;
   text-shadow: darkgray 5px 5px 3px;
-  font-family: "oxygen";
+  font-family: "Oxygen", sans-serif;
 }
 
 main .tiles {
