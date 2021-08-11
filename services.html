@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="icon" href="resources/ICON.png" />
     <title>Lorem-Tech | AlizZz</title>
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -31,7 +32,7 @@
               <span></span>
               <span></span>
               <span></span>
-              <h4>About us</h4>
+              <h4>About Us</h4>
               </a>
           <a href="services.html">
               <span></span>
@@ -59,7 +60,7 @@
         <p class="opening-text">
             Our team of 20+ experienced software engineers, developers, UX, software architects, and designers like to produce impactful products. We create products that are used by millions of users, in sectors spanning Education, Technology, Healthcare, Travel and beyond.
           </p>
-          <div class="services">
+          <div id="solutions" class="services">
           <div class="services-tabs">
             <section
               ><h2><i class="fas fa-chalkboard-teacher"></i> Web Services</h2>
@@ -95,7 +96,7 @@
     
     
 
-    <div class="services-two">
+    <div id="reference" class="services-two">
         <div class="wrapper">
         <span>
         <figure><i class="fas fa-chalkboard-teacher"></i></figure>
@@ -185,7 +186,7 @@
     </div>
 </div>
 
-<div class="service-three">
+<div id="clouds" class="service-three">
     <div class="text-part">
         <h2>Cloud:</h2>
         <p>Capture the true value of cloud and AI for your business</p>
@@ -215,7 +216,7 @@
     <div>
         <img src="resources/pexels-fauxels-3184465.jpg" alt="people image">
     </div>
-    <div class="right-side">
+    <div id="producteng" class="right-side">
         <h1>Product Engineering</h1>
 
         <div class="services">
@@ -242,7 +243,7 @@
           
           </div>
           <hr>
-          <footer>
+          <footer id="footi">
             <div class="top-section">
               <section>
                   <img src="resources/lorem-logo.png" alt="vedge-tech logo">
@@ -256,14 +257,23 @@
                     <span><a href="index.html">Home</a></span>
                   <span><a href="about.html">About us</a></span>
                   <span><a href="services.html">Services</a></span>
-                  <span><a href="clouds.html">Clouds</a></span>
+                  <span><a href="#clouds">Clouds</a></span>
                   <span><a href="contact.html">Contact Us</a></span>
-                  <span><a href="#">Projects</a></span>
-                  <span><a href="#">Solutions</a></span>
-                  <span><a href="#">Web Applications</a></span>
-                  <span><a href="#">Technologies</a></span>
+                  <span><a href="#popup1">Projects</a></span>
+                  <span><a href="#solutions">Solutions</a></span>
+                  <span><a href="#reference">Web Applications</a></span>
+                  <span><a href="index.html#ref">Technologies</a></span>
                 </div>
               </section>
+              <div id="popup1" class="overlay">
+                <div class="popup">
+                  <h2>Hello there! <i class="far fa-laugh"></i></h2>
+                  <a class="close" href="#footi">&times;</a>
+                  <div class="content">
+                    This is not a link really. He just wanted to see how do I work, you can close me from this &times; button. <i class="fas fa-grin-wink"></i>
+                  </div>
+                </div>
+              </div>
               <section>
                   <h2>Get in Touch</h2>
                   <i class="fas fa-map-marker-alt"></i>
@@ -277,7 +287,7 @@
             <hr>
             <div class="bottom-part">
               <p>Copyright&copy; 2021 Lorem-Tech | Powered by AlizZz</p>
-              <p> <a href="">Cookie Policy</a>  | <a href="">Privacy Policy</a> | <a href="">GDPR</a> </p>
+              <p> <a href="cookie-policy.html">Cookie Policy</a>  | <a href="privacy.html">Privacy Policy</a> | <a href="gdpr.html">GDPR</a> </p>
             </div>
           </footer>
       </main>

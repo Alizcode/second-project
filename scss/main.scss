@@ -1,8 +1,6 @@
 @import "reset";
 @import "variables";
 @import "mixins";
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Oxygen&display=swap');
-
 
 body{
 background: $mainBackGround;
@@ -111,37 +109,36 @@ height: 4.5rem;
             background: $forGround;
             box-shadow: 0 0 10px $textColor, 0 0 40px $textColor, 0 0 80px $textColor;
             font-weight: bolder;
-            transition-delay: 1s;
-            
+            transition-delay: 0.9s;
             }
     a:hover span:nth-child(1)
     {
         left: 100%;
-        transition: 1s;
+        transition: 0.6s;
 
     }
 
     a:hover span:nth-child(3)
     {
         right: 100%;
-        transition: 1s;
-        transition-delay: 0.5s;
+        transition: 0.6s;
+        transition-delay: 0.4s;
 
     }
     
     a:hover span:nth-child(2)
     {
         top: 100%;
-        transition: 1s;
-        transition-delay: 0.25s;
+        transition: 0.6s;
+        transition-delay: 0.2s;
 
     }
     
     a:hover span:nth-child(4)
     {
         bottom: 100%;
-        transition: 1s;
-        transition-delay: 0.75s;
+        transition: 0.6s;
+        transition-delay: 0.6s;
 
     }
 
@@ -461,7 +458,7 @@ footer
         transform: translateX(-50%);
         font-size: 7vw;
         text-shadow: darkgray 5px 5px 3px;
-        font-family: 'oxygen';
+        font-family: $secondaryFont;
     }
 }
 
@@ -780,3 +777,62 @@ main
     }
     }
 }
+
+
+
+
+
+//alert message
+
+  .overlay {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #000;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+    color: black;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+  
